@@ -71,7 +71,7 @@ function Home() {
         </button>
       </div>
 
-      <div className="peta hidden">
+      <div className="peta">
         <h1>PETA JAWA BARAT</h1>
         <p>Arahkan cursor pada peta untuk mengetahui letak Provinsi Jawa Barat</p>
         <div className="image-container">
@@ -82,7 +82,7 @@ function Home() {
         <p className="deks">Jawa Barat berbatasan dengan D.K.I Jakarta di sebelah barat, Laut Jawa di utara, Jawa Tengah di timur, dan Samudra Hindia di sebelah selatan.</p>
       </div>
 
-      <div className="container hidden">
+      <div className="container">
         <div className="text ">
           <div className="title">
             <h1>What is Jawa Barat?</h1>
