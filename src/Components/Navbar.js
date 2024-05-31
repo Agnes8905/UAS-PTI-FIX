@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { List } from "@phosphor-icons/react";
-import { Link, useLocation } from 'react-router-dom'; // Import useLocation hook
+import { Link, useLocation } from 'react-router-dom';
+import logo from '../asetHome/logo.png';
 import '../home.css';
 
 const Navbar = () => {
@@ -48,7 +49,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <img src="images/logo.png" className="logo" alt="Logo" />
+      <img src= {logo} className="logo" alt="Logo" />
       <div id="menu-icon" className="icon" onClick={handleMenuToggle}>
         <List size={32} />
       </div>

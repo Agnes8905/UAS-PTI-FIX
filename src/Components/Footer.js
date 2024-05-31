@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../asetHome/logo.png';
 
 const Footer = () => {
   return (
     <footer className="w-full relative mt-auto bg-gradient-to-r from-orange-950 to-yellow-800 text-white py-10 rounded-tl-[125px] text-lg leading-5 z-10">
       <div className="w-5/6 mx-auto flex flex-wrap items-start justify-between">
         <div className="w-full md:w-1/4 p-2">
-          <img src="images/logo.png" className="w-20 mb-8" alt="Logo" />
+          <img src={logo} className="w-20 mb-8" alt="Logo" />
           <p>
           © 2024 Welcome to Jawa Barat
           Authorized by Class A, Group 2, Class of 2023
