@@ -4,8 +4,9 @@
     flex-direction: column;
     align-items: center;
     background: #322C2B;
-    padding-bottom: 0; /* Adjust padding-bottom */
-    min-height: 100vh; /* Make sure AboutUs takes full viewport height */
+    padding-bottom: 0; 
+    min-height: 100vh; 
+    font-family: "Garamond";
 }
 
 .bgAboutUs {
@@ -13,7 +14,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-grow: 1; /* Allow bgAboutUs to take the remaining space */
+    flex-grow: 1; 
 }
 
 .AboutUs .ruangKosong {
@@ -52,7 +53,7 @@
 
 .AboutUs .SectionTop h1:hover {
     color: transparent;
-    -webkit-text-stroke: 1px white; /* Untuk membuat garis pada teks */
+    -webkit-text-stroke: 1px white; 
 }
 
 .AboutUs .SectionTop a {
@@ -101,7 +102,7 @@
     position: relative;
     color: white;
     text-align: center;
-    margin-bottom: 20px; /* Add margin to prevent elements sticking together */
+    margin-bottom: 20px; 
 }
 
 .AboutUs .text h1 { 
@@ -114,14 +115,14 @@
     line-height: 1;
     margin: 0 auto;
     font-size: 20px;
-    margin-bottom: 20px; /* Add margin to prevent elements sticking together */
+    margin-bottom: 20px; 
 }
 
 .AboutUs .text2 {
     position: relative;
     color: white;
     text-align: center;
-    margin-bottom: 20px; /* Add margin to prevent elements sticking together */
+    margin-bottom: 20px; 
 }
 
 .AboutUs .text2 h1 { 
@@ -134,7 +135,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     width: 70%;
-    margin-bottom: 20px; /* Add margin to prevent elements sticking together */
+    margin-bottom: 20px; 
 }
 
 .AboutUs .card {
@@ -148,7 +149,7 @@
     box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
     transition: 0.5s ease-in-out;
     margin: 15px;
-    flex: 1 1 calc(25% - 30px); /* 25% minus margin */
+    flex: 1 1 calc(25% - 30px); 
 }
 
 .AboutUs .card:hover {
@@ -181,7 +182,7 @@
     top: 0;
     left: 0;
     filter: grayscale(0%);
-    transition: filter 0.5s ease-in-out; /* Add transition for smooth effect */
+    transition: filter 0.5s ease-in-out;
 }
 
 .AboutUs .card:hover img {
@@ -230,6 +231,19 @@
         justify-content: center;
     }
     .AboutUs .card {
-        flex: 1 1 calc(50% - 30px); /* 50% minus margin */
+        flex: 1 1 calc(50% - 30px); 
+    }
+}
+
+@media (max-width: 524px) {
+    .aboutUs .content h1 {
+        top: -50px;
+    }
+    .aboutUs h1 {
+        font-size: 24px;
+    }
+
+    .AboutUs .paragraf{
+        font-size: 12px;
     }
 }

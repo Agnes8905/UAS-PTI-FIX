@@ -6,6 +6,11 @@ import Slider from './slider';
 import Footer from '../Components/Footer';
 import '../home.css';
 
+import videoOpening from '../asetHome/video.mp4';
+import petaIndo from '../asetHome/peta/petaNusantara.png';
+import petaJawa from '../asetHome/peta/petaJawaBarat.png';
+import petaKecil from '../asetHome/petaKecil.png';
+
 function Home() {
   const [isMuted, setIsMuted] = useState(true);
 
@@ -50,7 +55,7 @@ function Home() {
     <div className="home">
       <div className="header" id="aaa">
         <video autoPlay loop muted playsInline className="back-video" id="background-video">
-          <source src="images/video.mp4" type="video/mp4" />
+          <source src={videoOpening} type="video/mp4" />
         </video>
         <div className="content">
           <h4>Welcome to</h4>
@@ -70,8 +75,8 @@ function Home() {
         <h1>PETA JAWA BARAT</h1>
         <p>Arahkan cursor pada peta untuk mengetahui letak Provinsi Jawa Barat</p>
         <div className="image-container">
-          <img src="images/peta/petaNusantara.PNG" alt="Gambar 1" className="base-image" />
-          <img src="images/peta/petaJawaBarat.PNG" alt="Gambar 2" className="hover-image" />
+          <img src={petaIndo} alt="Gambar 1" className="base-image" />
+          <img src={petaJawa} alt="Gambar 2" className="hover-image" />
         </div>
         <p className="deks">Jawa Barat adalah sebuah provinsi di Indonesia yang terletak pada bagian barat Pulau Jawa.</p>
         <p className="deks">Jawa Barat berbatasan dengan D.K.I Jakarta di sebelah barat, Laut Jawa di utara, Jawa Tengah di timur, dan Samudra Hindia di sebelah selatan.</p>
@@ -91,7 +96,7 @@ function Home() {
           </div>
         </div>
         <div className="image">
-          <img src="images/petaKecil.png" alt="Image" />
+          <img src={petaKecil} alt="Image" />
         </div>
       </div>
 
