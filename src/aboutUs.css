@@ -1,0 +1,235 @@
+.AboutUs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #322C2B;
+    padding-bottom: 0; /* Adjust padding-bottom */
+    min-height: 100vh; /* Make sure AboutUs takes full viewport height */
+}
+
+.bgAboutUs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1; /* Allow bgAboutUs to take the remaining space */
+}
+
+.AboutUs .ruangKosong {
+    height: 100px;
+}
+
+.AboutUs .SectionTop {
+    position: relative;
+    text-align: center;
+    color: white;
+    height: 400px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.AboutUs .SectionTop img {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.AboutUs .SectionTop .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    transition: background-color 0.3s;
+}
+
+.AboutUs .SectionTop h1 {
+    margin: 0;
+}
+
+.AboutUs .SectionTop h1:hover {
+    color: transparent;
+    -webkit-text-stroke: 1px white; /* Untuk membuat garis pada teks */
+}
+
+.AboutUs .SectionTop a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.AboutUs .SectionTop a:hover {
+    color: lightgray;
+}
+
+.AboutUs .content {
+    position: relative;
+    text-transform: uppercase;
+}
+
+.AboutUs .content h1 {
+    color: #fff;
+    font-size: 60px;
+    letter-spacing: 15px;
+}
+
+.AboutUs .content a {
+    background: #AF8260;
+    padding: 10px 24px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+.AboutUs .content a:hover {
+    background: #322C2B;
+    color: #fff;
+}
+
+.AboutUs .SectionTop img {
+    filter: grayscale(100%);
+}
+
+.AboutUs .SectionTop img:hover {
+    filter: grayscale(0%);
+}
+
+.AboutUs .text {
+    position: relative;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px; /* Add margin to prevent elements sticking together */
+}
+
+.AboutUs .text h1 { 
+    font-size: 60px; 
+    font-weight: bold;
+}
+
+.AboutUs .paragraf {
+    width: 80%;
+    line-height: 1;
+    margin: 0 auto;
+    font-size: 20px;
+    margin-bottom: 20px; /* Add margin to prevent elements sticking together */
+}
+
+.AboutUs .text2 {
+    position: relative;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px; /* Add margin to prevent elements sticking together */
+}
+
+.AboutUs .text2 h1 { 
+    font-size: 60px; 
+    font-weight: bold;
+}
+
+.AboutUs .photo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 70%;
+    margin-bottom: 20px; /* Add margin to prevent elements sticking together */
+}
+
+.AboutUs .card {
+    width: 280px;
+    height: 360px;
+    padding: 2rem 1rem;
+    background: #fff;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+    transition: 0.5s ease-in-out;
+    margin: 15px;
+    flex: 1 1 calc(25% - 30px); /* 25% minus margin */
+}
+
+.AboutUs .card:hover {
+    transform: translateY(20px);
+}
+
+.AboutUs .card:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 176, 155, 0.5), rgba(0,176,155,0.5));
+    z-index: 2;
+    transition: 0.5s all;
+    opacity: 0;
+}
+
+.AboutUs .card:hover:after {
+    opacity: 1;
+}
+
+.AboutUs .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: grayscale(0%);
+    transition: filter 0.5s ease-in-out; /* Add transition for smooth effect */
+}
+
+.AboutUs .card:hover img {
+    filter: grayscale(100%);
+}
+
+.AboutUs .card .info {
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s all;
+}
+
+.AboutUs .card:hover .info {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.AboutUs .card .info h1 {
+    margin: 0;
+}
+
+.AboutUs .card .info p {
+    letter-spacing: 1px;
+    font-size: 15px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+.AboutUs .card .info .btn {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background: #fff;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .AboutUs .photo {
+        justify-content: center;
+    }
+    .AboutUs .card {
+        flex: 1 1 calc(50% - 30px); /* 50% minus margin */
+    }
+}

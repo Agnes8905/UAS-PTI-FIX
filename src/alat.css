@@ -1,0 +1,122 @@
+.borderAlat {
+    width: 70%;
+    height: auto;
+    max-width: 800px;
+    margin-top: -30px;
+    padding: 20px;
+    box-sizing: content-box;
+    background-color: #322C2B;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    transition: height 0.8s ease-in-out, padding 0.8s ease-in-out, border-radius 0.8s ease-in-out, width 0.8s ease-in-out;
+    border: 3px solid #AF8260;
+    overflow: hidden;
+}
+
+.borderAlat.activeAlat {
+    width: 75%;
+    border-radius: 30px;
+    border-color: #AF8260;
+}
+
+.borderAlat h1 {
+    font-size: 50px;
+    text-align: center;
+    color: #AF8260;
+    margin: 20px;
+}
+
+.borderAlat p {
+    font-size: 20px;
+    color: #AF8260;
+}
+
+.borderAlat h2 {
+    color: #AF8260;
+}
+
+.containerAlat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.isiContainerAlat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.gambarAlat {
+    width: 30%;
+    margin: 10px 0;
+    transition: transform 0.9s;
+}
+
+.gambarAlat img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.gambarAlat:hover img {
+    transform: scale(1.2);
+}
+
+.appearingText {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.appearingText.visibleAlat {
+    display: block;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+}
+
+.fade-out {
+    animation: fadeOut .5s ease forwards;
+}
+
+@media (max-width: 1000px){
+    .borderAlat {
+        margin-top: -150px;
+    }
+
+    .borderAlat p {
+        font-size: 1em;
+    }
+
+    .borderAlat h1 {
+        font-size: 3em;
+    }
+
+    .borderAlat h2 {
+        font-size: 2em;
+    }
+}

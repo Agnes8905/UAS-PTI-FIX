@@ -1,0 +1,76 @@
+.containerTarian {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 20px;
+  border: 2px solid #3a2726;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #977860;
+  width: 80%;
+}
+
+.containerTarian h2 {
+  color: #4b2d2c;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.slideTarian {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.slideTarian button {
+  background-color: #AF8260;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 10px;
+  transition: transform 0.3s, background-color 0.3s;
+  font-size: 1.5em;
+  margin-left: 0;
+}
+
+.slideTarian button:hover {
+  background-color: #AF8260;
+  color: #4b2d2c;
+}
+
+.tariJB {
+  border: none;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  aspect-ratio: 16/9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .containerTarian {
+      padding: 10px;
+  }
+
+  .slideTarian button {
+      font-size: 1.2em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .tariJB {
+      height: 200px;
+  }
+
+  .slideTarian {
+      gap: 5px;
+  }
+
+  .slideTarian button {
+      font-size: 1em;
+      padding: 8px;
+  }
+}

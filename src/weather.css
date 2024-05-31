@@ -1,0 +1,179 @@
+.Map {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+.Map::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+.Map {
+  font-family: "EB Garamond", sans-serif;
+  background-image: url("./assets/weather/backgroundbody.png");
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat; 
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+@keyframes wave-animation {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 100%;
+  }
+}
+
+.wave-background {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(90deg, #9B3922 0%, #9B3922 100%);
+  background-size: 1000% auto;
+  animation: wave-animation 10s linear infinite;
+}
+
+.Map input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 25px;
+  border: 2px solid #F2613F; 
+  margin-top: 20px; 
+}
+
+.Map button[type="submit"] {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 20px; 
+  background-color: #803D3B; 
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+.Map button[type="submit"]:hover {
+  background-color: #9B3922;
+}
+
+.weather {
+  background-image: url("./assets/weather/batik.png");
+  background-size : cover;
+  background-position: 2px, 40px, 100px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); 
+  animation: move 10s infinite alternate;
+  background-size: cover;
+  border-radius: 10px;
+  background-repeat: repeat;
+}
+
+@keyframes move {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0; 
+  }
+}
+
+
+.weather h2 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #481E14; 
+}
+
+.current-weather .weather-info .current-weather-icon {
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.current-weather .weather-info .current-weather-icon:hover {
+  transform: scale(1.1);
+}
+
+.current-weather .weather .weather-info img{
+  width: 170px;
+}
+
+.front {
+  background-color: transparent; 
+  z-index: 3;
+}
+
+.back {
+  background-color: transparent; 
+  transform: rotateY(180deg); 
+  z-index: 1; 
+  opacity: 0; 
+}
+
+.forecast-item:hover .back {
+  opacity: 1;
+  transform: rotateY(180deg);
+  
+}
+
+.forecast-item:hover {
+  transform: translateY(-5px);
+}
+
+.back-content {
+  text-align: center;
+  transform: rotateY(180deg); 
+}
+
+.forecast-list .row h2{
+  color:#ffc1b3;
+}
+
+.forecast-header {
+  color: #e6b188;
+}
+
+.forecast-item {
+  flex: 0 0 150px; 
+  margin: 10px;
+  padding: 15px;
+  border: 4px solid #9B3922;
+  border-radius: 25px;
+  background-image: url("./assets/weather/batik2.png");
+  background-size: 200px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); 
+  text-align: center;
+  animation: move 3s infinite alternate; 
+  position: relative;
+  padding: 10px; 
+  perspective: 1000px; 
+  transition: transform 0.5s; 
+  margin-right: 10px;
+}
+
+
+.forecast-item img {
+  width: 80px; 
+}
+
+@media only screen and (max-width: 768px) {
+  .Map {
+    padding-bottom: 0; 
+  }
+  
+  .weather {
+    width: 90%;
+    background-size: 400px;
+  }
+
+  .forecast-item {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
