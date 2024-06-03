@@ -19,6 +19,17 @@
   z-index: 1;
 }
 
+@media (max-width: 500px){
+  .header{
+    height: 28vh; 
+  }
+
+  .header .navContent {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
 .header video {
   position: absolute;
   top: 0;
@@ -174,12 +185,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 20px;
   text-align: center;
+  font-size: 25px;
+  padding : 20px 30px 80px 30px;
 }
 
 .peta h1 {
-  font-size: 70px;
+  font-size: 80px;
   margin: 0;
 }
 
@@ -209,10 +221,7 @@
   transform: translate(-50%, -50%);
   text-align: center;
   color: #fff;
-}
-
-.content h4 {
-  font-size: 35px;
+  font-size: 25px;
 }
 
 .content h1 {
@@ -280,11 +289,17 @@
 .container {
   color: white;
   border-radius: 8px;
-  padding: 20px;
+  padding-top: 50px;
+  padding-bottom: 100px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   text-align: left;
+  font-size: 25px;
+}
+
+.container h1 {
+  font-size: 80px;
 }
 
 .title {
@@ -324,39 +339,60 @@
 }
 
 @media (max-width: 768px) {
+  .peta {
+    padding : 10px;
+    font-size: 20px;
+  }
   .peta h1 {
-    font-size: 40px;
+    font-size: 70px;
   }
 
   .container {
+    padding-top: 200px;
+    display: flex;
     flex-direction: column;
-    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
   }
 
-  .container .text, .container .image {
-    flex-basis: 100%;
-    margin: 10px 0;
+  .text {
+    margin-bottom: 20px;
   }
 
-  .text, .image {
+  .title h1 {
     margin: 0;
+  }
+
+  .isi {
+    margin-top: 10px;
+  }
+
+  .image img {
+    max-width: 100%;
+    height: auto;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 300px) {
+  .peta {
+    font: 12px;
+  }
+
   .peta h1 {
-    font-size: 30px;
+    font-size: 24px;
   }
 
   .title {
-    font-size: 30px;
+    font-size: 24px;
   }
 
   .container {
-    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 12px;
   }
 
   .container .text, .container .image {
@@ -368,27 +404,29 @@
   }
 }
 
-.isi {
-  max-height: 400px;
-  overflow-y: auto;
-  margin-top: 10px;
+.container2 {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .title2 {
   text-align: center;
-  color: #fff;
-  z-index: 0;
-  position: relative;
-  margin-top: 20px; 
-  padding: 20px;
+  font-size: 70px;
+  color: white;
+}
+
+.sliderGambar {
+  display: flex;
+  justify-content: center;
 }
 
 .slider {
   height: calc(100vh - 100px); 
-  margin-top: 20px; 
   margin-bottom: 50px; 
   width: 90vw;
-  left: 60px;
   overflow: hidden;
   position: relative;
   z-index: 0; 
@@ -458,7 +496,6 @@
     border: 1px solid #fff;
     color: #eee;
 }
-
 
 /* Thumbnail Section  */
 .thumbnail{
@@ -554,7 +591,6 @@
     animation-delay: 1s !important;
 }
 
-/* Animation for next button click */
 .slider.next .list .item:nth-child(1) img{
     width: 150px;
     height: 220px;
@@ -642,23 +678,23 @@
     animation: contentOut 1.5s linear 1 forwards!important;
 }
 
+@media (max-width: 768px){
+  .slider .list .item .content .title,  .slider .list .item .content .type {
+    font-size: 50px;
+    width: 300px;
+  }
+
+  .slider .list .item .content .description {
+    font-size: 15px;
+    width: 300px;
+  }
+}
+
 @keyframes contentOut{
     to{
         transform: translateY(-150px);
         filter: blur(20px);
         opacity: 0;
-    }
-}
-
-@media screen and (max-width: 678px) {
-    .slide{
-      left: 0;
-    }
-    .slider .list .item .content{
-        padding-right: 0;
-    }
-    .slider .list .item .content .title{
-        font-size: 50px;
     }
 }
 
@@ -690,21 +726,10 @@ footer a {
   }
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .hidden {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.6s, transform 0.6s;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
 .show {
@@ -712,3 +737,13 @@ footer a {
   transform: translateY(0);
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}

@@ -30,16 +30,16 @@ const Slider = () => {
       description: 'Bangunan dihiasi bebatuan karang yang dibangun pada masa Keratonan untuk tempat beristirahat bagi Sultan Cirebon beserta keluarga, meditasi, dan berlatih perang bagi prajurit Cirebon.'
     },
     {
-      image: sukabumi,
-      title: 'MASJID AGUNG TASIKMALAYA',
+      image: tasikmalaya,
+      title: 'MASJID AGUNG',
       type: 'Tasikmalaya',
       description: 'Salah satu masjid tertua di Indonesia, yaitu sejak tahun 1888. Dibangun dengan asitektur yang unik yakni bergaya neoklasik dengan perpaduan Sunda, Jawa, dan Eropa. '
     },
     {
-      image: tasikmalaya,
+      image: sukabumi,
       title: 'CURUG CIMARINJUNG',
       type: 'Sukabumi',
-      description: 'Air terjun spektakuler yang terletak di daerah Puncak, Bogor, Jawa Barat. Faktanya, keunikan curug ini terletak pada tingginya yang mencapai sekitar 80 meter serta suasana sekitar yang masih sangat alami dan terjaga. Selain itu, curug ini juga dikelilingi oleh pepohonan rindang dan vegetasi yang subur.'
+      description: 'Curug yang berada di ketinggian 80 meter ini masih dikelilingi oleh suasana sekitar yang masih sangat alami dan terjaga sehingga menjadi objek wisata'
     }
   ];
 

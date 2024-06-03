@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faVolumeUp, faVolumeMute } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import { Link } from 'react-router-dom';
 import Slider from './slider';
 import Footer from '../Components/Footer';
 import '../home.css';
@@ -60,8 +60,10 @@ function Home() {
         <div className="content">
           <h4>Welcome to</h4>
           <h1>JAWA BARAT</h1>
-          <a id="facts-link">Facts</a>
-          <Link to="/show">Explore</Link> {/* Use Link to navigate to /show */}
+          <div className="navContent">
+            <a id="facts-link">Facts</a>
+            <Link to="/show">Explore</Link> 
+          </div>
         </div>
       </div>
 
@@ -71,7 +73,7 @@ function Home() {
         </button>
       </div>
 
-      <div className="peta">
+      <div className="peta hidden">
         <h1>PETA JAWA BARAT</h1>
         <p>Arahkan cursor pada peta untuk mengetahui letak Provinsi Jawa Barat</p>
         <div className="image-container">
@@ -82,10 +84,10 @@ function Home() {
         <p className="deks">Jawa Barat berbatasan dengan D.K.I Jakarta di sebelah barat, Laut Jawa di utara, Jawa Tengah di timur, dan Samudra Hindia di sebelah selatan.</p>
       </div>
 
-      <div className="container">
+      <div className="container hidden">
         <div className="text ">
           <div className="title">
-            <h1>What is Jawa Barat?</h1>
+            <h1>Apa itu Jawa Barat?</h1>
           </div>
           <div className="isi">
             <p>
@@ -100,9 +102,12 @@ function Home() {
         </div>
       </div>
 
-      <div className="title2 ">
-        <h1>Kebudayaan dan Wisata Alam di Jawa Barat</h1>
-        <Slider />
+
+      <div className="container2">
+        <h1 className="title2">Kebudayaan dan Wisata Alam di Jawa Barat</h1>
+        <div className="slideGambar">
+          <Slider />
+        </div>
       </div>
       <Footer />
     </div>

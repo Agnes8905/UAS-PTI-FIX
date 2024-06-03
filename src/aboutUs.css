@@ -235,7 +235,7 @@
     }
 }
 
-@media (max-width: 524px) {
+@media (max-width: 768px) {
     .aboutUs .content h1 {
         top: -50px;
     }
@@ -246,5 +246,36 @@
 
     .AboutUs .paragraf{
         font-size: 12px;
+    }
+}
+
+@media (max-width: 500px) {
+    .AboutUs .SectionTop {
+        height: 200px;
+    }
+
+    .AboutUs .SectionTop .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -60%);
+        padding: 20px;
+        transition: background-color 0.3s;
+    }
+
+    .AboutUs .SectionTop .content h1 {
+       font-size: 36px;
+       margin-bottom: -20px;
+    }
+
+    .AboutUs .ruangKosong {
+        height: 0;
+    }
+
+    .AboutUs .photo {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 100%;
+        align-items: center;
     }
 }
